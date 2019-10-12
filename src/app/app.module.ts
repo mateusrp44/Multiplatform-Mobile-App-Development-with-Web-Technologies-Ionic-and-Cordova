@@ -18,6 +18,7 @@ import { PromotionProvider } from '../providers/promotion/promotion';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { FavoriteProvider } from '../providers/favorite/favorite';
 import { baseURL } from '../shared/baseurl';
+import { ReservationPage } from '../pages/reservation/reservation';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { baseURL } from '../shared/baseurl';
     MenuPage,
     ContactPage,
     DishdetailPage,
-    FavoritesPage
+    FavoritesPage,
+    ReservationPage
+
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { baseURL } from '../shared/baseurl';
     MenuPage,
     ContactPage,
     DishdetailPage,
-    FavoritesPage
+    FavoritesPage,
+    ReservationPage
   ],
   providers: [
     StatusBar,
