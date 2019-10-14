@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 688:
+/***/ 687:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FavoritesPageModule", function() { return FavoritesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DishdetailPageModule", function() { return DishdetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__favorites__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dishdetail__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FavoritesPageModule = (function () {
-    function FavoritesPageModule() {
+var DishdetailPageModule = (function () {
+    function DishdetailPageModule() {
     }
-    FavoritesPageModule = __decorate([
+    DishdetailPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__favorites__["a" /* FavoritesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__dishdetail__["a" /* DishdetailPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__favorites__["a" /* FavoritesPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__dishdetail__["a" /* DishdetailPage */]),
             ],
         })
-    ], FavoritesPageModule);
-    return FavoritesPageModule;
+    ], DishdetailPageModule);
+    return DishdetailPageModule;
 }());
 
-//# sourceMappingURL=favorites.module.js.map
+//# sourceMappingURL=dishdetail.module.js.map
 
 /***/ })
 
