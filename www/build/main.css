@@ -36438,6 +36438,16 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+ion-spinner {
+  display: block;
+  margin: auto;
+}
+
+ion-spinner {
+  display: block;
+  margin: auto;
+}
+
 page-home .btn-facebook {
   color: #fff !important;
   background-color: #3b5998 !important;
@@ -36463,6 +36473,11 @@ page-home .btn-mail {
   background-color: #512DA8 !important;
 }
 
+ion-spinner {
+  display: block;
+  margin: auto;
+}
+
 page-menu ion-card {
   position: relative;
   text-align: center;
@@ -36483,4 +36498,9 @@ page-menu .card-subtitle {
   top: 52%;
   width: 100%;
   color: #fff;
+}
+
+ion-spinner {
+  display: block;
+  margin: auto;
 }
