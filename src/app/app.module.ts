@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -18,7 +19,7 @@ import { LeaderProvider } from '../providers/leader/leader';
 import { PromotionProvider } from '../providers/promotion/promotion';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { FavoriteProvider } from '../providers/favorite/favorite';
-import { baseURL } from '../shared/baseurl';
+import { BaseURL } from '../shared/baseurl';
 import { ReservationPage } from '../pages/reservation/reservation';
 import { CommentPage } from '../pages/comment/comment';
 import { LoginPage } from '../pages/login/login';
@@ -64,7 +65,8 @@ import { LoginPage } from '../pages/login/login';
     PromotionProvider,
     ProcessHttpmsgProvider,
     FavoriteProvider,
-    { provide: 'BaseURL', useValue: baseURL },
+    LocalNotifications,
+    { provide: 'BaseURL', useValue: BaseURL },
   ]
 })
 export class AppModule {}

@@ -17,7 +17,7 @@ export class AboutPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private leaderService: LeaderProvider,
-    @Inject('BaseURL') private BaseURL) {}
+    @Inject('BaseURL') private baseURL) {}
 
     ngOnInit() {
       this.leaderService.getLeaders()

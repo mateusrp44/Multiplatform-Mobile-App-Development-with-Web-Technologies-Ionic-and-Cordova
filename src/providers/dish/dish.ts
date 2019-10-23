@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Dish } from '../../shared/dish';
 import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
-import { baseURL } from '../../shared/baseurl';
+import { BaseURL } from '../../shared/baseurl';
 import { ProcessHttpmsgProvider } from '../process-httpmsg/process-httpmsg';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/delay';
@@ -14,19 +14,19 @@ export class DishProvider {
               private processHTTPMsgService: ProcessHttpmsgProvider) { }
 
   getDishes(): Observable<Dish[]> {
-    return this.http.get(baseURL + 'dishes')
+    return this.http.get(BaseURL + 'dishes')
                     .map(res => { return this.processHTTPMsgService.extractData(res); })
                     .catch(error => { return this.processHTTPMsgService.handleError(error); });
   }
 
   getDish(id: number): Observable<Dish> {
-    return  this.http.get(baseURL + 'dishes/'+ id)
+    return  this.http.get(BaseURL + 'dishes/'+ id)
                     .map(res => { return this.processHTTPMsgService.extractData(res); })
                     .catch(error => { return this.processHTTPMsgService.handleError(error); });
   }
 
   getFeaturedDish(): Observable<Dish> {
-    return this.http.get(baseURL + 'dishes?featured=true')
+    return this.http.get(BaseURL + 'dishes?featured=true')
                     .map(res => { return this.processHTTPMsgService.extractData(res)[0]; })
                     .catch(error => { return this.processHTTPMsgService.handleError(error); });
   }
