@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ActionSheetController, ModalController } from 'ionic-angular';
+import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 
 import { Dish } from '../../shared/dish';
 import { FavoriteProvider } from '../../providers/favorite/favorite';
@@ -23,6 +24,7 @@ export class DishdetailPage {
     private toastCtrl: ToastController,
     private actionSheetCtrl: ActionSheetController,
     private modalCtrl: ModalController,
+    private socialSharing: SocialSharing,
     @Inject('BaseURL') private BaseURL,
     private favoriteservice: FavoriteProvider) {
     this.dish = navParams.get('dish');
@@ -68,6 +70,24 @@ export class DishdetailPage {
           role: 'cancel',
           handler: () => {
             console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Share via Facebook',
+          handler: () => {
+            this.socialSharing.shareViaFacebook(this.dish.name + ' -- ' + this
+            .dish.description, this.BaseURL + this.dish.image, '')
+            .then(() => console.log('Posted succesfully to Facebook'))
+            .catch(() => console.log('Failed to post to Facebook'));
+          }
+        },
+        {
+          text: 'Share via Twitter',
+          handler: () => {
+            this.socialSharing.shareViaTwitter(this.dish.name + ' -- ' + this
+            .dish.description, this.BaseURL + this.dish.image, '')
+            .then(() => console.log('Posted succesfully to Twitter'))
+            .catch(() => console.log('Failed to post to Twitter'));
           }
         }
       ]

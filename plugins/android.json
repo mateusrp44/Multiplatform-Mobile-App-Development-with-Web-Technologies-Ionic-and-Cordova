@@ -31,10 +31,17 @@
     },
     "cordova-plugin-email": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-app-event": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "es6-promise-plugin": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }

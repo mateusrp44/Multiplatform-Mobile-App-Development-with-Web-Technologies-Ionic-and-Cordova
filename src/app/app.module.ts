@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -68,6 +69,7 @@ import { LoginPage } from '../pages/login/login';
     FavoriteProvider,
     LocalNotifications,
     EmailComposer,
+    SocialSharing,
     { provide: 'BaseURL', useValue: BaseURL },
   ]
 })
