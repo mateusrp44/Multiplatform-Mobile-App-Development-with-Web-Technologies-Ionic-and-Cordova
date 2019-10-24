@@ -13,7 +13,7 @@
     <ion-row>
       <ion-col col-12 col-lg-6>
         <ion-card *ngIf="dish">
-          <img src="{{BaseURL + dish.image}}" />
+          <img src="{{ BaseURL + dish.image }}" />
           <ion-card-content>
             <ion-card-title>
               {{dish.name | uppercase}}
@@ -43,7 +43,7 @@
         </div>
         <div *ngIf="errMess">
           <h2>Error</h2>
-          <h4>{{errMess}}</h4>
+          <h4>{{ errMess }}</h4>
         </div>
       </ion-col>
       <ion-col col-12 col-lg-6>

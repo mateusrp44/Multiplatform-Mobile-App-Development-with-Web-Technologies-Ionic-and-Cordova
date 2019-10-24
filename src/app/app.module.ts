@@ -5,10 +5,11 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
-import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { Camera } from '@ionic-native/camera/ngx';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx/index';
+import { EmailComposer } from '@ionic-native/email-composer/ngx/index';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx/index';
+import { Camera } from '@ionic-native/camera/ngx/index';
+import { Network } from '@ionic-native/network/ngx/index';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -65,7 +66,7 @@ import { RegisterPage } from '../pages/register/register';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     DishProvider,
     LeaderProvider,
     PromotionProvider,
@@ -75,7 +76,9 @@ import { RegisterPage } from '../pages/register/register';
     EmailComposer,
     SocialSharing,
     Camera,
+    Network,
     { provide: 'BaseURL', useValue: BaseURL },
   ]
 })
+
 export class AppModule {}
