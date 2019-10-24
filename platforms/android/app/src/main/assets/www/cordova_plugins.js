@@ -66,6 +66,15 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
         "cordova.plugins.notification.local.core",
         "plugin.notification.local.core"
       ]
+    },
+    {
+      "id": "cordova-plugin-email.EmailComposer",
+      "file": "plugins/cordova-plugin-email/www/email_composer.js",
+      "pluginId": "cordova-plugin-email",
+      "clobbers": [
+        "cordova.plugins.email",
+        "plugin.email"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -76,6 +85,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-ionic-webview": "4.1.2",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-app-event": "1.2.2",
-    "de.appplant.cordova.plugin.local-notification": "0.8.5"
+    "de.appplant.cordova.plugin.local-notification": "0.8.5",
+    "cordova-plugin-email": "1.2.7"
   };
 });
